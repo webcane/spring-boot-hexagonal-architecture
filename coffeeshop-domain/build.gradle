@@ -1,0 +1,12 @@
+plugins {
+    id 'java-library'
+    id 'jvm-test-suite'
+    id 'java-test-fixtures'
+}
+
+dependencies {
+    implementation project(':usecase')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
