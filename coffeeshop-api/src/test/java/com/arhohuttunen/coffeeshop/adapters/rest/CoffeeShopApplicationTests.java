@@ -42,9 +42,7 @@ class CoffeeShopApplicationTests {
     }
 
     private UUID placeOrder() throws Exception {
-        var location = mockMvc.perform(post("/order")
-                        .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content("""
+        var testOrder = """
                         {
                             "location": "IN_STORE",
                             "items": [{
@@ -54,13 +52,16 @@ class CoffeeShopApplicationTests {
                                 "size": "LARGE"
                             }]
                         }
-                        """))
+                        """;
+        var location = mockMvc.perform(post("/order")
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+                        .content(testOrder))
                 .andExpect(status().isCreated())
                 .andReturn()
                 .getResponse()
                 .getHeader(HttpHeaders.LOCATION);
 
-        return location == null ? null : UUID.fromString(location.substring(location.lastIndexOf("/") + 1));
+        return location != null ? UUID.fromString(location.substring(location.lastIndexOf("/") + 1)) : null;
     }
 
     private void cancelOrder(UUID orderId) throws Exception {
@@ -69,16 +70,17 @@ class CoffeeShopApplicationTests {
     }
 
     private void payOrder(UUID orderId) throws Exception {
-        mockMvc.perform(put("/payment/{id}", orderId)
-                        .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content("""
+        var testPayment = """
                         {
                             "cardHolderName": "Michael Faraday",
                             "cardNumber": "11223344",
                             "expiryMonth": 12,
                             "expiryYear": 2023
                         }
-                        """))
+                        """;
+        mockMvc.perform(put("/payment/{id}", orderId)
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+                        .content(testPayment))
                 .andExpect(status().isOk());
     }
 
