@@ -27,8 +27,8 @@ class AcceptanceTests {
     void setup() {
         orders = new InMemoryOrders();
         payments = new InMemoryPayments();
-        customer = new CoffeeShop(orders, payments);
-        barista = new CoffeeMachine(orders);
+        customer = new CoffeeShopUseCase(orders, payments);
+        barista = new CoffeeMachineUseCase(orders);
     }
 
     @Test

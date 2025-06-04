@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class CoffeeShopApplicationTests {
+class CoffeeShopUseCaseApplicationTests {
     @Autowired
     private MockMvc mockMvc;
 

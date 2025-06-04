@@ -8,10 +8,10 @@ import com.arhohuttunen.coffeeshop.ports.out.Orders;
 import java.util.UUID;
 
 @UseCase
-class CoffeeMachine implements PreparingCoffeeService {
+class CoffeeMachineUseCase implements PreparingCoffeeService {
     private final Orders orders;
 
-    public CoffeeMachine(Orders orders) {
+    public CoffeeMachineUseCase(Orders orders) {
         this.orders = orders;
     }
 

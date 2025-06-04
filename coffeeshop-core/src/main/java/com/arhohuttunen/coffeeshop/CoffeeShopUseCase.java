@@ -13,11 +13,11 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @UseCase
-class CoffeeShop implements OrderingCoffeeService {
+class CoffeeShopUseCase implements OrderingCoffeeService {
     private final Orders orders;
     private final Payments payments;
 
-    public CoffeeShop(Orders orders, Payments payments) {
+    public CoffeeShopUseCase(Orders orders, Payments payments) {
         this.orders = orders;
         this.payments = payments;
     }
