@@ -17,7 +17,7 @@ import static com.arhohuttunen.coffeeshop.ports.out.PaymentTestFactory.aPaymentF
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-class AcceptanceTests {
+class CoffeeShopAcceptanceTests {
     private Orders orders;
     private Payments payments;
     private OrderingCoffeeService customer;

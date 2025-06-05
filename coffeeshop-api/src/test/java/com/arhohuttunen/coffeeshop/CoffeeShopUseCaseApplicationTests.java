@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.adapters.rest;
+package com.arhohuttunen.coffeeshop;
 
 import com.arhohuttunen.coffeeshop.ports.in.PreparingCoffeeService;
 import org.junit.jupiter.api.Test;

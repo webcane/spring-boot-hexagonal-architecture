@@ -1,6 +1,6 @@
 package com.arhohuttunen.coffeeshop.adapters.rest.payment;
 
-import com.arhohuttunen.coffeeshop.DomainTestConfig;
+import com.arhohuttunen.coffeeshop.CoffeeShopTestConfig;
 import com.arhohuttunen.coffeeshop.ports.out.Orders;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest
-@Import(DomainTestConfig.class)
+@Import(CoffeeShopTestConfig.class)
 public class PaymentControllerTest {
     @Autowired
     private MockMvc mockMvc;
