@@ -1,14 +1,14 @@
-package com.arhohuttunen.coffeeshop.application;
+package com.arhohuttunen.coffeeshop;
 
-import com.arhohuttunen.coffeeshop.application.in.OrderingCoffee;
-import com.arhohuttunen.coffeeshop.application.in.PreparingCoffee;
-import com.arhohuttunen.coffeeshop.application.order.LineItem;
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.out.OrderNotFound;
-import com.arhohuttunen.coffeeshop.application.out.Orders;
-import com.arhohuttunen.coffeeshop.application.out.Payments;
-import com.arhohuttunen.coffeeshop.application.out.stub.InMemoryOrders;
-import com.arhohuttunen.coffeeshop.application.out.stub.InMemoryPayments;
+import com.arhohuttunen.coffeeshop.in.OrderingCoffee;
+import com.arhohuttunen.coffeeshop.in.PreparingCoffee;
+import com.arhohuttunen.coffeeshop.order.LineItem;
+import com.arhohuttunen.coffeeshop.order.Order;
+import com.arhohuttunen.coffeeshop.out.OrderNotFound;
+import com.arhohuttunen.coffeeshop.out.Orders;
+import com.arhohuttunen.coffeeshop.out.Payments;
+import com.arhohuttunen.coffeeshop.out.stub.InMemoryOrders;
+import com.arhohuttunen.coffeeshop.out.stub.InMemoryPayments;
 import com.arhohuttunen.coffeeshop.shared.Drink;
 import com.arhohuttunen.coffeeshop.shared.Location;
 import com.arhohuttunen.coffeeshop.shared.Milk;
@@ -19,12 +19,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static com.arhohuttunen.coffeeshop.application.order.OrderTestFactory.aPaidOrder;
-import static com.arhohuttunen.coffeeshop.application.order.OrderTestFactory.aReadyOrder;
-import static com.arhohuttunen.coffeeshop.application.order.OrderTestFactory.anOrder;
-import static com.arhohuttunen.coffeeshop.application.order.OrderTestFactory.anOrderInPreparation;
-import static com.arhohuttunen.coffeeshop.application.payment.CreditCardTestFactory.aCreditCard;
-import static com.arhohuttunen.coffeeshop.application.payment.PaymentTestFactory.aPaymentForOrder;
+import static com.arhohuttunen.coffeeshop.order.OrderTestFactory.aPaidOrder;
+import static com.arhohuttunen.coffeeshop.order.OrderTestFactory.aReadyOrder;
+import static com.arhohuttunen.coffeeshop.order.OrderTestFactory.anOrder;
+import static com.arhohuttunen.coffeeshop.order.OrderTestFactory.anOrderInPreparation;
+import static com.arhohuttunen.coffeeshop.payment.CreditCardTestFactory.aCreditCard;
+import static com.arhohuttunen.coffeeshop.payment.PaymentTestFactory.aPaymentForOrder;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -70,7 +70,8 @@ class AcceptanceTests {
 
         customer.cancelOrder(existingOrder.getId());
 
-        assertThatThrownBy(() -> orders.findOrderById(existingOrder.getId())).isInstanceOf(OrderNotFound.class);
+        assertThatThrownBy(() -> orders.findOrderById(existingOrder.getId()))
+                .isInstanceOf(OrderNotFound.class);
     }
 
     @Test
@@ -82,14 +83,16 @@ class AcceptanceTests {
 
         assertThat(payment.orderId()).isEqualTo(existingOrder.getId());
         assertThat(payment.creditCard()).isEqualTo(creditCard);
-        assertThat(orders.findOrderById(existingOrder.getId()).getStatus()).isEqualTo(Status.PAID);
+        assertThat(orders.findOrderById(existingOrder.getId()).getStatus())
+                .isEqualTo(Status.PAID);
     }
 
     @Test
     void noChangesAllowedWhenOrderIsPaid() {
         var existingOrder = orders.save(aPaidOrder());
 
-        assertThatThrownBy(() -> customer.updateOrder(existingOrder.getId(), anOrder())).isInstanceOf(IllegalStateException.class);
+        assertThatThrownBy(() -> customer.updateOrder(existingOrder.getId(), anOrder()))
+                .isInstanceOf(IllegalStateException.class);
     }
 
     @Test
@@ -109,7 +112,8 @@ class AcceptanceTests {
 
         var orderInPreparation = barista.startPreparingOrder(existingOrder.getId());
 
-        assertThat(orderInPreparation.getStatus()).isEqualTo(Status.PREPARING);
+        assertThat(orderInPreparation.getStatus())
+                .isEqualTo(Status.PREPARING);
     }
 
     @Test
@@ -118,7 +122,8 @@ class AcceptanceTests {
 
         var preparedOrder = barista.finishPreparingOrder(existingOrder.getId());
 
-        assertThat(preparedOrder.getStatus()).isEqualTo(Status.READY);
+        assertThat(preparedOrder.getStatus())
+                .isEqualTo(Status.READY);
     }
 
     @Test
@@ -127,6 +132,7 @@ class AcceptanceTests {
 
         var takenOrder = customer.takeOrder(existingOrder.getId());
 
-        assertThat(takenOrder.getStatus()).isEqualTo(Status.TAKEN);
+        assertThat(takenOrder.getStatus())
+                .isEqualTo(Status.TAKEN);
     }
 }

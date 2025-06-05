@@ -1,6 +1,6 @@
-package com.arhohuttunen.coffeeshop.application.in;
+package com.arhohuttunen.coffeeshop.in;
 
-import com.arhohuttunen.coffeeshop.application.order.Order;
+import com.arhohuttunen.coffeeshop.order.Order;
 
 import java.util.UUID;
 

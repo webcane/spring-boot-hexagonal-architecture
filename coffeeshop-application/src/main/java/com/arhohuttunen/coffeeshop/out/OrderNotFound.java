@@ -1,3 +1,3 @@
-package com.arhohuttunen.coffeeshop.application.out;
+package com.arhohuttunen.coffeeshop.out;
 
 public class OrderNotFound extends RuntimeException { }

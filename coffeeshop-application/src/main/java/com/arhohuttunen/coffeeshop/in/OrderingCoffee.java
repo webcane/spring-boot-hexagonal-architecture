@@ -1,9 +1,9 @@
-package com.arhohuttunen.coffeeshop.application.in;
+package com.arhohuttunen.coffeeshop.in;
 
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.payment.CreditCard;
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
-import com.arhohuttunen.coffeeshop.application.payment.Receipt;
+import com.arhohuttunen.coffeeshop.order.Order;
+import com.arhohuttunen.coffeeshop.payment.CreditCard;
+import com.arhohuttunen.coffeeshop.payment.Payment;
+import com.arhohuttunen.coffeeshop.payment.Receipt;
 
 import java.util.UUID;
 

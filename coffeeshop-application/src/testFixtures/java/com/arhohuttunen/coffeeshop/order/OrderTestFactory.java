@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.application.order;
+package com.arhohuttunen.coffeeshop.order;
 
 import com.arhohuttunen.coffeeshop.shared.Drink;
 import com.arhohuttunen.coffeeshop.shared.Location;

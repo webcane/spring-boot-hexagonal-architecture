@@ -1,19 +1,19 @@
-package com.arhohuttunen.coffeeshop.application;
+package com.arhohuttunen.coffeeshop;
 
 import com.arhohuttunen.architecture.UseCase;
-import com.arhohuttunen.coffeeshop.application.in.OrderingCoffee;
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.out.Orders;
-import com.arhohuttunen.coffeeshop.application.out.Payments;
-import com.arhohuttunen.coffeeshop.application.payment.CreditCard;
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
-import com.arhohuttunen.coffeeshop.application.payment.Receipt;
+import com.arhohuttunen.coffeeshop.in.OrderingCoffee;
+import com.arhohuttunen.coffeeshop.order.Order;
+import com.arhohuttunen.coffeeshop.out.Orders;
+import com.arhohuttunen.coffeeshop.out.Payments;
+import com.arhohuttunen.coffeeshop.payment.CreditCard;
+import com.arhohuttunen.coffeeshop.payment.Payment;
+import com.arhohuttunen.coffeeshop.payment.Receipt;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @UseCase
-public class CoffeeShop implements OrderingCoffee {
+class CoffeeShop implements OrderingCoffee {
     private final Orders orders;
     private final Payments payments;
 

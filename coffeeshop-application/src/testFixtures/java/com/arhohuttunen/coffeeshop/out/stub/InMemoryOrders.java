@@ -1,8 +1,8 @@
-package com.arhohuttunen.coffeeshop.application.out.stub;
+package com.arhohuttunen.coffeeshop.out.stub;
 
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.out.OrderNotFound;
-import com.arhohuttunen.coffeeshop.application.out.Orders;
+import com.arhohuttunen.coffeeshop.order.Order;
+import com.arhohuttunen.coffeeshop.out.OrderNotFound;
+import com.arhohuttunen.coffeeshop.out.Orders;
 
 import java.util.HashMap;
 import java.util.Map;

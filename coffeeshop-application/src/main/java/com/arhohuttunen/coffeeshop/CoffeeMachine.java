@@ -1,14 +1,14 @@
-package com.arhohuttunen.coffeeshop.application;
+package com.arhohuttunen.coffeeshop;
 
 import com.arhohuttunen.architecture.UseCase;
-import com.arhohuttunen.coffeeshop.application.in.PreparingCoffee;
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.out.Orders;
+import com.arhohuttunen.coffeeshop.in.PreparingCoffee;
+import com.arhohuttunen.coffeeshop.order.Order;
+import com.arhohuttunen.coffeeshop.out.Orders;
 
 import java.util.UUID;
 
 @UseCase
-public class CoffeeMachine implements PreparingCoffee {
+class CoffeeMachine implements PreparingCoffee {
     private final Orders orders;
 
     public CoffeeMachine(Orders orders) {

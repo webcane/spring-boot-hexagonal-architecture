@@ -1,6 +1,6 @@
-package com.arhohuttunen.coffeeshop.application.out;
+package com.arhohuttunen.coffeeshop.out;
 
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
+import com.arhohuttunen.coffeeshop.payment.Payment;
 
 import java.util.UUID;
 

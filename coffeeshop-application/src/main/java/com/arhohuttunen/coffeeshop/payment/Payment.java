@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.application.payment;
+package com.arhohuttunen.coffeeshop.payment;
 
 import java.time.LocalDate;
 import java.util.UUID;

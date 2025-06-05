@@ -1,7 +1,7 @@
-package com.arhohuttunen.coffeeshop.application.out.stub;
+package com.arhohuttunen.coffeeshop.out.stub;
 
-import com.arhohuttunen.coffeeshop.application.out.Payments;
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
+import com.arhohuttunen.coffeeshop.out.Payments;
+import com.arhohuttunen.coffeeshop.payment.Payment;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.application.order;
+package com.arhohuttunen.coffeeshop.order;
 
 import com.arhohuttunen.coffeeshop.shared.Drink;
 import com.arhohuttunen.coffeeshop.shared.Location;
@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-public class OrderCostTest {
+class OrderCostTest {
 
     private static Stream<Arguments> drinkCosts() {
         return Stream.of(
