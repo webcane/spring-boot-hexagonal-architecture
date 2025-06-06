@@ -1,6 +1,6 @@
 package com.arhohuttunen.coffeeshop.adapter.in.rest;
 
-import com.arhohuttunen.coffeeshop.config.DomainTestConfig;
+import com.arhohuttunen.coffeeshop.CoffeeShopTestConfig;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 
@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @WebMvcTest
-@Import(DomainTestConfig.class)
+@Import(CoffeeShopTestConfig.class)
 public @interface RestResourceTest {
 }

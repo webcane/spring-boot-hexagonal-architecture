@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.config;
+package com.arhohuttunen.coffeeshop;
 
 import com.arhohuttunen.architecture.UseCase;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,5 +8,5 @@ import org.springframework.context.annotation.FilterType;
 @Configuration
 @ComponentScan(basePackages = "com.arhohuttunen.coffeeshop.usecases",
         includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = UseCase.class))
-public class DomainConfig {
+public class CoffeeShopConfig {
 }

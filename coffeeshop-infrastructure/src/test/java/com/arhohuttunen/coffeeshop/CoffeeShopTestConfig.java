@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.config;
+package com.arhohuttunen.coffeeshop;
 
 import com.arhohuttunen.coffeeshop.ports.out.Orders;
 import com.arhohuttunen.coffeeshop.ports.out.Payments;
@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
 @TestConfiguration
-@Import(DomainConfig.class)
-public class DomainTestConfig {
+@Import(CoffeeShopConfig.class)
+public class CoffeeShopTestConfig {
     @Bean
     Orders orders() {
         return new InMemoryOrders();
