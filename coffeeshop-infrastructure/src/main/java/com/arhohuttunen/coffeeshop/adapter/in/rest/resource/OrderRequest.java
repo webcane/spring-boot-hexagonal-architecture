@@ -1,7 +1,7 @@
 package com.arhohuttunen.coffeeshop.adapter.in.rest.resource;
 
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.shared.Location;
+import com.arhohuttunen.coffeeshop.domain.order.Order;
+import com.arhohuttunen.coffeeshop.domain.shared.Location;
 
 import java.util.List;
 

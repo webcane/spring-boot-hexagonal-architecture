@@ -1,8 +1,8 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence;
 
 import com.arhohuttunen.coffeeshop.adapter.out.persistence.entity.PaymentEntity;
-import com.arhohuttunen.coffeeshop.application.out.Payments;
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
+import com.arhohuttunen.coffeeshop.ports.out.Payments;
+import com.arhohuttunen.coffeeshop.domain.payment.Payment;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

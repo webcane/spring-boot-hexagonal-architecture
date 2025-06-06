@@ -1,8 +1,8 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence;
 
-import com.arhohuttunen.coffeeshop.application.out.Payments;
-import com.arhohuttunen.coffeeshop.application.payment.CreditCard;
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
+import com.arhohuttunen.coffeeshop.ports.out.Payments;
+import com.arhohuttunen.coffeeshop.domain.payment.CreditCard;
+import com.arhohuttunen.coffeeshop.domain.payment.Payment;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.jdbc.Sql;
@@ -13,7 +13,7 @@ import java.time.Year;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 
-import static com.arhohuttunen.coffeeshop.application.payment.CreditCardTestFactory.aCreditCard;
+import static com.arhohuttunen.coffeeshop.domain.payment.CreditCardTestFactory.aCreditCard;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

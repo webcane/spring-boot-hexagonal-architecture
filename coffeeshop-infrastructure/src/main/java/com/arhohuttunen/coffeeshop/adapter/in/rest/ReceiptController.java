@@ -2,7 +2,7 @@ package com.arhohuttunen.coffeeshop.adapter.in.rest;
 
 import com.arhohuttunen.coffeeshop.adapter.in.rest.resource.OrderResponse;
 import com.arhohuttunen.coffeeshop.adapter.in.rest.resource.ReceiptResponse;
-import com.arhohuttunen.coffeeshop.application.in.OrderingCoffee;
+import com.arhohuttunen.coffeeshop.ports.in.OrderingCoffee;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

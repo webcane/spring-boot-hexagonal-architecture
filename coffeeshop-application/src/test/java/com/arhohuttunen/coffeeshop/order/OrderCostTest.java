@@ -1,9 +1,11 @@
 package com.arhohuttunen.coffeeshop.order;
 
-import com.arhohuttunen.coffeeshop.shared.Drink;
-import com.arhohuttunen.coffeeshop.shared.Location;
-import com.arhohuttunen.coffeeshop.shared.Milk;
-import com.arhohuttunen.coffeeshop.shared.Size;
+import com.arhohuttunen.coffeeshop.domain.order.LineItem;
+import com.arhohuttunen.coffeeshop.domain.order.Order;
+import com.arhohuttunen.coffeeshop.domain.shared.Drink;
+import com.arhohuttunen.coffeeshop.domain.shared.Location;
+import com.arhohuttunen.coffeeshop.domain.shared.Milk;
+import com.arhohuttunen.coffeeshop.domain.shared.Size;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

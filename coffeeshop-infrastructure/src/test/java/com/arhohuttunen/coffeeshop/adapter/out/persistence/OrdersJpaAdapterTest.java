@@ -1,13 +1,13 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence;
 
-import com.arhohuttunen.coffeeshop.application.order.LineItem;
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.out.OrderNotFound;
-import com.arhohuttunen.coffeeshop.application.out.Orders;
-import com.arhohuttunen.coffeeshop.shared.Drink;
-import com.arhohuttunen.coffeeshop.shared.Location;
-import com.arhohuttunen.coffeeshop.shared.Milk;
-import com.arhohuttunen.coffeeshop.shared.Size;
+import com.arhohuttunen.coffeeshop.domain.order.LineItem;
+import com.arhohuttunen.coffeeshop.domain.order.Order;
+import com.arhohuttunen.coffeeshop.ports.out.OrderNotFound;
+import com.arhohuttunen.coffeeshop.ports.out.Orders;
+import com.arhohuttunen.coffeeshop.domain.shared.Drink;
+import com.arhohuttunen.coffeeshop.domain.shared.Location;
+import com.arhohuttunen.coffeeshop.domain.shared.Milk;
+import com.arhohuttunen.coffeeshop.domain.shared.Size;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.jdbc.Sql;

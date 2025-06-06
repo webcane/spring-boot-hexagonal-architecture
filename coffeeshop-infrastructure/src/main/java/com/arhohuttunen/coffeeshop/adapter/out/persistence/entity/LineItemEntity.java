@@ -1,9 +1,9 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence.entity;
 
-import com.arhohuttunen.coffeeshop.application.order.LineItem;
-import com.arhohuttunen.coffeeshop.shared.Drink;
-import com.arhohuttunen.coffeeshop.shared.Milk;
-import com.arhohuttunen.coffeeshop.shared.Size;
+import com.arhohuttunen.coffeeshop.domain.order.LineItem;
+import com.arhohuttunen.coffeeshop.domain.shared.Drink;
+import com.arhohuttunen.coffeeshop.domain.shared.Milk;
+import com.arhohuttunen.coffeeshop.domain.shared.Size;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;

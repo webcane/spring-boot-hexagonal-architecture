@@ -1,6 +1,6 @@
 package com.arhohuttunen.coffeeshop.adapter.in.rest.resource;
 
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
+import com.arhohuttunen.coffeeshop.domain.payment.Payment;
 
 public record PaymentResponse(String cardHolderName, String cardNumber, Integer expiryMonth, Integer expiryYear) {
     public static PaymentResponse fromDomain(Payment payment) {

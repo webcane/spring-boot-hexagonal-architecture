@@ -1,9 +1,9 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence;
 
 import com.arhohuttunen.coffeeshop.adapter.out.persistence.entity.OrderEntity;
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.application.out.OrderNotFound;
-import com.arhohuttunen.coffeeshop.application.out.Orders;
+import com.arhohuttunen.coffeeshop.domain.order.Order;
+import com.arhohuttunen.coffeeshop.ports.out.OrderNotFound;
+import com.arhohuttunen.coffeeshop.ports.out.Orders;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

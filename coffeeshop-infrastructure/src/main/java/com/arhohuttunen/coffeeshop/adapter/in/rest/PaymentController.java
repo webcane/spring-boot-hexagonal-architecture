@@ -2,8 +2,8 @@ package com.arhohuttunen.coffeeshop.adapter.in.rest;
 
 import com.arhohuttunen.coffeeshop.adapter.in.rest.resource.PaymentRequest;
 import com.arhohuttunen.coffeeshop.adapter.in.rest.resource.PaymentResponse;
-import com.arhohuttunen.coffeeshop.application.in.OrderingCoffee;
-import com.arhohuttunen.coffeeshop.application.payment.CreditCard;
+import com.arhohuttunen.coffeeshop.ports.in.OrderingCoffee;
+import com.arhohuttunen.coffeeshop.domain.payment.CreditCard;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

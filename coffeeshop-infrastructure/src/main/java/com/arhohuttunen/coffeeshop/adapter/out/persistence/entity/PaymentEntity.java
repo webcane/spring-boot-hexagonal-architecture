@@ -1,7 +1,7 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence.entity;
 
-import com.arhohuttunen.coffeeshop.application.payment.CreditCard;
-import com.arhohuttunen.coffeeshop.application.payment.Payment;
+import com.arhohuttunen.coffeeshop.domain.payment.CreditCard;
+import com.arhohuttunen.coffeeshop.domain.payment.Payment;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

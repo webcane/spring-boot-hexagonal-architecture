@@ -1,6 +1,6 @@
 package com.arhohuttunen.coffeeshop.adapter.in.rest.resource;
 
-import com.arhohuttunen.coffeeshop.application.payment.Receipt;
+import com.arhohuttunen.coffeeshop.domain.payment.Receipt;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

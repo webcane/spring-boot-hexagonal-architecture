@@ -1,8 +1,8 @@
 package com.arhohuttunen.coffeeshop.adapter.out.persistence.entity;
 
-import com.arhohuttunen.coffeeshop.application.order.Order;
-import com.arhohuttunen.coffeeshop.shared.Location;
-import com.arhohuttunen.coffeeshop.shared.Status;
+import com.arhohuttunen.coffeeshop.domain.order.Order;
+import com.arhohuttunen.coffeeshop.domain.shared.Location;
+import com.arhohuttunen.coffeeshop.domain.shared.Status;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;

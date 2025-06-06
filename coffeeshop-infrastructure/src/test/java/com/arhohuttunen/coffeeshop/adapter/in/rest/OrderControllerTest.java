@@ -1,12 +1,12 @@
 package com.arhohuttunen.coffeeshop.adapter.in.rest;
 
-import com.arhohuttunen.coffeeshop.application.out.Orders;
+import com.arhohuttunen.coffeeshop.ports.out.Orders;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static com.arhohuttunen.coffeeshop.application.order.OrderTestFactory.anOrder;
+import static com.arhohuttunen.coffeeshop.domain.order.OrderTestFactory.anOrder;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;

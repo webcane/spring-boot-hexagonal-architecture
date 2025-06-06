@@ -6,9 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 
 @Configuration
-@ComponentScan(
-        basePackages = "com.arhohuttunen.coffeeshop.application",
-        includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = UseCase.class)
-)
+@ComponentScan(basePackages = "com.arhohuttunen.coffeeshop.usecases",
+        includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, value = UseCase.class))
 public class DomainConfig {
 }
