@@ -18,6 +18,7 @@ class ModularityTests {
     void writeDocumentationSnippets() {
         new Documenter(modules)
                 .writeAggregatingDocument()
+                .writeModuleCanvases()
                 .writeModulesAsPlantUml()
                 .writeIndividualModulesAsPlantUml();
     }
