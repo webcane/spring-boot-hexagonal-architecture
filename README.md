@@ -14,6 +14,14 @@ open in browser
 GET http://localhost:8080/receipt/757d9c0f-400f-4137-9aea-83e64ba3efb2
 ```
 
+response
+```json
+{
+    "amount": 5,
+    "paid": "2025-06-06"
+}
+```
+
 ## spring modulith modules
 ```dotenv
 # Adapter
