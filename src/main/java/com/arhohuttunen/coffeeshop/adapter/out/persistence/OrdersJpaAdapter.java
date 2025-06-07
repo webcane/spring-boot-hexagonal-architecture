@@ -4,10 +4,12 @@ import com.arhohuttunen.coffeeshop.domain.order.Order;
 import com.arhohuttunen.coffeeshop.port.out.OrderNotFound;
 import com.arhohuttunen.coffeeshop.port.out.Orders;
 import lombok.RequiredArgsConstructor;
+import org.jmolecules.architecture.hexagonal.SecondaryAdapter;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+@SecondaryAdapter
 @Component
 @RequiredArgsConstructor
 public class OrdersJpaAdapter implements Orders {

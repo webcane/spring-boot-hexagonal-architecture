@@ -4,6 +4,7 @@ import com.arhohuttunen.coffeeshop.port.in.OrderingCoffee;
 import com.arhohuttunen.coffeeshop.domain.payment.CreditCard;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.jmolecules.architecture.hexagonal.PrimaryAdapter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import java.time.Month;
 import java.time.Year;
 import java.util.UUID;
 
+@PrimaryAdapter
 @Controller
 @RequiredArgsConstructor
 public class PaymentController {

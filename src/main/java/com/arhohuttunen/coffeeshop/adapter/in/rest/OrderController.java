@@ -2,6 +2,7 @@ package com.arhohuttunen.coffeeshop.adapter.in.rest;
 
 import com.arhohuttunen.coffeeshop.port.in.OrderingCoffee;
 import lombok.RequiredArgsConstructor;
+import org.jmolecules.architecture.hexagonal.PrimaryAdapter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.UUID;
 
+@PrimaryAdapter
 @Controller
 @RequiredArgsConstructor
 public class OrderController {

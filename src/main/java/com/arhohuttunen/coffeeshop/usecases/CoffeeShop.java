@@ -11,7 +11,6 @@ import com.arhohuttunen.coffeeshop.domain.payment.Receipt;
 
 import java.time.LocalDate;
 import java.util.UUID;
-
 @UseCase
 class CoffeeShop implements OrderingCoffee {
     private final Orders orders;
