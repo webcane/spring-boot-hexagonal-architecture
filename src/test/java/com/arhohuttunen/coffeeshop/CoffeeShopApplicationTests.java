@@ -1,6 +1,6 @@
 package com.arhohuttunen.coffeeshop;
 
-import com.arhohuttunen.coffeeshop.port.in.PreparingCoffee;
+import com.arhohuttunen.coffeeshop.order.PreparingCoffee;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

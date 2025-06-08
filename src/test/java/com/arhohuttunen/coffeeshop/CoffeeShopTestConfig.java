@@ -1,9 +1,9 @@
 package com.arhohuttunen.coffeeshop;
 
-import com.arhohuttunen.coffeeshop.port.out.Orders;
-import com.arhohuttunen.coffeeshop.port.out.Payments;
-import com.arhohuttunen.coffeeshop.port.out.stub.InMemoryOrders;
-import com.arhohuttunen.coffeeshop.port.out.stub.InMemoryPayments;
+import com.arhohuttunen.coffeeshop.order.Orders;
+import com.arhohuttunen.coffeeshop.order.Payments;
+import com.arhohuttunen.coffeeshop.order.persistence.InMemoryOrders;
+import com.arhohuttunen.coffeeshop.order.persistence.InMemoryPayments;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
