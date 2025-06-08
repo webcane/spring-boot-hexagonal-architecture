@@ -1,4 +1,4 @@
-package com.arhohuttunen.coffeeshop.order.persistence;
+package com.arhohuttunen.coffeeshop.order.persistence.stud;
 
 import com.arhohuttunen.coffeeshop.order.Payments;
 import com.arhohuttunen.coffeeshop.order.Payment;
