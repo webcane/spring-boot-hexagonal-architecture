@@ -1,5 +1,7 @@
 plugins {
     id 'java-library'
+    id 'org.springframework.boot' version '3.4.6'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.arhohuttunen'
@@ -21,4 +23,20 @@ allprojects {
             useJUnitPlatform()
         }
     }
+}
+
+dependencies {
+    implementation project(':usecase')
+    implementation project(':coffeeshop-api')
+    implementation project(':coffeeshop-core')
+    implementation project(':coffeeshop-infrastructure')
+    implementation 'org.springframework.boot:spring-boot-starter'
+}
+
+bootJar {
+    enabled = true
+}
+
+jar {
+    enabled = false
 }
