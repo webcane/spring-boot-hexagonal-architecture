@@ -3,18 +3,11 @@ package com.arhohuttunen.coffeeshop;
 import com.arhohuttunen.coffeeshop.adapters.rest.order.OrderController;
 import com.arhohuttunen.coffeeshop.adapters.rest.payment.PaymentController;
 import com.arhohuttunen.coffeeshop.adapters.rest.receipt.ReceiptController;
-import com.arhohuttunen.coffeeshop.ports.in.OrderingCoffeeService;
 import com.arhohuttunen.coffeeshop.ports.in.PreparingCoffeeService;
-import com.arhohuttunen.coffeeshop.ports.out.InMemoryOrders;
-import com.arhohuttunen.coffeeshop.ports.out.InMemoryPayments;
-import com.arhohuttunen.coffeeshop.ports.out.Orders;
-import com.arhohuttunen.coffeeshop.ports.out.Payments;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -25,10 +18,13 @@ import java.util.UUID;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * Test uses cases in the chain
+ */
 @AutoConfigureMockMvc
 @WebMvcTest({OrderController.class, PaymentController.class, ReceiptController.class})
 @Import(CoffeeShopMockConfig.class)
-class CoffeeShopUseCasesTest {
+class CoffeeShopIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -70,7 +66,7 @@ class CoffeeShopUseCasesTest {
                 .getResponse()
                 .getHeader(HttpHeaders.LOCATION);
 
-        return location != null ? UUID.fromString(location.substring(location.lastIndexOf("/") + 1)) : null;
+        return UUID.fromString(location.substring(location.lastIndexOf("/") + 1));
     }
 
     private void cancelOrder(UUID orderId) throws Exception {

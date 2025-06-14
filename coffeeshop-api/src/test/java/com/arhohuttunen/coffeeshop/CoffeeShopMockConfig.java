@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
 /**
- * Configure test's Output ports
+ * Configure test's Output ports and UseCase beans
  */
 @TestConfiguration
 public class CoffeeShopMockConfig {
