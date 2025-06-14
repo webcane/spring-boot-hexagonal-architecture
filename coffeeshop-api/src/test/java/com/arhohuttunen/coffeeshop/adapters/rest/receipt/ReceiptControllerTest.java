@@ -1,6 +1,6 @@
 package com.arhohuttunen.coffeeshop.adapters.rest.receipt;
 
-import com.arhohuttunen.coffeeshop.CoffeeShopTestConfig;
+import com.arhohuttunen.coffeeshop.CoffeeShopMockConfig;
 import com.arhohuttunen.coffeeshop.ports.out.Orders;
 import com.arhohuttunen.coffeeshop.ports.out.Payments;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest
-@Import(CoffeeShopTestConfig.class)
+@Import(CoffeeShopMockConfig.class)
 public class ReceiptControllerTest {
     @Autowired
     private MockMvc mockMvc;
